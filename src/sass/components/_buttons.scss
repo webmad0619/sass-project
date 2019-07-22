@@ -1,0 +1,19 @@
+@import "../utils/_mixins";
+
+@for $i from 1 through 100 {
+
+    // for each $col_#{i} 
+    .button_#{$i} {
+
+      // set the background-color to cornflowerblue and 
+      // each time lighten the color slightly
+      background-color: darken(blue, 0% + ($i / 2));
+      height: #{(3)}px;
+      width: #{(500 / 3)}px;
+      @extend %animatable;
+
+      &:hover {
+          background-color: lighten(red, 0% + ($i / 2));;
+      }
+    }
+  }

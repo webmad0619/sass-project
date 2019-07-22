@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import FancyButton from './fancyButton';
+// import "./sass/main.scss"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <FancyButton>Hola chicos 1</FancyButton>
+        <FancyButton>Hola chicos 2</FancyButton>
+        <FancyButton>Hola chicos 3</FancyButton>
+
+        <div className="test-div">lorem ipsum dolor</div>
+        {
+          Array(100).fill().map((x, idx) => {
+            return <div className={"button_" + idx}></div>
+          })
+        }
+      </div>
+    )
+  }
 }
-
-export default App;

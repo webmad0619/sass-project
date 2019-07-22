@@ -1,0 +1,15 @@
+@import "../utils/_mixins.scss";
+@import "../utils/_colors.scss";
+
+.fancy {
+    padding: 2em;
+    color: black;
+    font-size: 18px;
+    background: $normalColor;
+    border-radius: 10px;
+    @extend %animatable;
+
+    &:hover {
+        background: lighten($normalColor, 12.9);
+    }
+}
